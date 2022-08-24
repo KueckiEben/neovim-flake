@@ -22,7 +22,17 @@
       url = "github:lewis6991/gitsigns.nvim";
       flake = false;
     };
-  };
+    # neovim-nix
+    "plugin:vim-nix" = {
+      url = "github:LnL7/vim-nix";
+      flake = false;
+    };
+    # VimTex
+    "plugin:vimtex" = {
+      url = "github:lervag/vimtex";
+      flake = false;
+    };
+    
 
   outputs = { self, nixpkgs, flake-utils, ... }@inputs:
     # This line makes this package availeable for all systems
