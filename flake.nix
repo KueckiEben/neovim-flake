@@ -27,6 +27,11 @@
       url = "github:LnL7/vim-nix";
       flake = false;
     };
+    # VimTeX
+    "plugin:vimtex" = {
+      url = "github:lervag/vimtex";
+      flake = false;
+    };
     # FTerm.nvim
     "plugin:FTerm.nvim" = {
       url = "github:numToStr/FTerm.nvim";
