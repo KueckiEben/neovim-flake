@@ -32,6 +32,7 @@
       url = "github:lervag/vimtex";
       flake = false;
     };
+   };
     
 
   outputs = { self, nixpkgs, flake-utils, ... }@inputs:
