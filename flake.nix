@@ -38,8 +38,8 @@
       flake = false;
     };
     # NVIM Tree
-    "plugin:nvim-tree" = {
-      url = "github:kyazdani42/nvim-tree";
+    "plugin:nvim-tree.lua" = {
+      url = "github:kyazdani42/nvim-tree.lua";
       flake = false;
     };
   };
