@@ -101,13 +101,47 @@
         "type": "github"
       }
     },
+    "plugin:vim-nix": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1650919516,
+        "narHash": "sha256-W6ExP+iDNo5T8XazxHRpUiECGv+AU5PPoM4CmU7NV+0=",
+        "owner": "LnL7",
+        "repo": "vim-nix",
+        "rev": "7d23e97d13c40fcc6d603b291fe9b6e5f92516ee",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LnL7",
+        "repo": "vim-nix",
+        "type": "github"
+      }
+    },
+    "plugin:vimtex": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1661115591,
+        "narHash": "sha256-HLatEGmKLI75TC/VxMyWE7kWpHNyuAxpiiqjVseL6PY=",
+        "owner": "lervag",
+        "repo": "vimtex",
+        "rev": "0cf45fd3f8128f427588098389634233738682f4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lervag",
+        "repo": "vimtex",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
         "neovim-flake": "neovim-flake",
         "nixpkgs": "nixpkgs",
         "plugin:gitsigns": "plugin:gitsigns",
-        "plugin:onedark-vim": "plugin:onedark-vim"
+        "plugin:onedark-vim": "plugin:onedark-vim",
+        "plugin:vim-nix": "plugin:vim-nix",
+        "plugin:vimtex": "plugin:vimtex"
       }
     }
   },

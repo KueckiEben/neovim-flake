@@ -11,7 +11,7 @@
       url = "github:neovim/neovim?dir=contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     # Theme
     "plugin:onedark-vim" = {
       url = "github:joshdick/onedark.vim";
@@ -27,19 +27,33 @@
       url = "github:LnL7/vim-nix";
       flake = false;
     };
-    # VimTex
-    "plugin:vimtex" = {
-      url = "github:lervag/vimtex";
+    # FTerm.nvim
+    "plugin:FTerm.nvim" = {
+      url = "github:numToStr/FTerm.nvim";
       flake = false;
     };
-   };
-    
+    # NVIM Web DevIcons
+    "plugin:nvim-web-devicons" = {
+      url = "github:kyazdani42/nvim-web-devicons";
+      flake = false;
+    };
+    # NVIM Tree
+    "plugin:nvim-tree" = {
+      url = "github:kyazdani42/nvim-tree";
+      flake = false;
+    };
+  };
 
-  outputs = { self, nixpkgs, flake-utils, ... }@inputs:
-    # This line makes this package availeable for all systems
-    # ("x86_64-linux", "aarch64-linux", "i686-linux", "x86_64-darwin",...)
-    flake-utils.lib.eachDefaultSystem (system:
-      let
+  outputs = {
+    self,
+    nixpkgs,
+    flake-utils,
+    ...
+  } @ inputs:
+  # This line makes this package availeable for all systems
+  # ("x86_64-linux", "aarch64-linux", "i686-linux", "x86_64-darwin",...)
+    flake-utils.lib.eachDefaultSystem (
+      system: let
         # Once we add this overlay to our nixpkgs, we are able to
         # use `pkgs.neovimPlugins`, which is a map of our plugins.
         # Each input in the format:
@@ -54,19 +68,20 @@
         # ```
         # pkgs.neovimPlugins.yourPluginName
         # ```
-        pluginOverlay = final: prev:
-          let
-            inherit (prev.vimUtils) buildVimPluginFrom2Nix;
-            treesitterGrammars = prev.tree-sitter.withPlugins (_: prev.tree-sitter.allGrammars);
-            plugins = builtins.filter
-              (s: (builtins.match "plugin:.*" s) != null)
-              (builtins.attrNames inputs);
-            plugName = input:
-              builtins.substring
-                (builtins.stringLength "plugin:")
-                (builtins.stringLength input)
-                input;
-            buildPlug = name: buildVimPluginFrom2Nix {
+        pluginOverlay = final: prev: let
+          inherit (prev.vimUtils) buildVimPluginFrom2Nix;
+          treesitterGrammars = prev.tree-sitter.withPlugins (_: prev.tree-sitter.allGrammars);
+          plugins =
+            builtins.filter
+            (s: (builtins.match "plugin:.*" s) != null)
+            (builtins.attrNames inputs);
+          plugName = input:
+            builtins.substring
+            (builtins.stringLength "plugin:")
+            (builtins.stringLength input)
+            input;
+          buildPlug = name:
+            buildVimPluginFrom2Nix {
               pname = plugName name;
               version = "master";
               src = builtins.getAttr name inputs;
@@ -79,15 +94,14 @@
               #    ln -s ${treesitterGrammars} parser
               #  '' else "";
             };
-          in
-          {
-            neovimPlugins = builtins.listToAttrs (map
-              (plugin: {
-                name = plugName plugin;
-                value = buildPlug plugin;
-              })
-              plugins);
-          };
+        in {
+          neovimPlugins = builtins.listToAttrs (map
+            (plugin: {
+              name = plugName plugin;
+              value = buildPlug plugin;
+            })
+            plugins);
+        };
 
         # Apply the overlay and load nixpkgs as `pkgs`
         pkgs = import nixpkgs {
@@ -104,7 +118,7 @@
         # configuration as input and just returns a version of
         # neovim where the default config was overwritten with your
         # config.
-        # 
+        #
         # Parameters:
         # customRC | your init.vim as string
         # viAlias  | allow calling neovim using `vi`
@@ -122,46 +136,46 @@
         #          |   url   = "github:exampleAuthor/examplePlugin";
         #          |   flake = false;
         #          | };
-        #          | 
+        #          |
         #          | "plugin:anotherPluginYouLike" = {
         #          |   url   = "github:exampleAuthor/examplePlugin";
         #          |   flake = false;
         #          | };
         #          | ```
         #          | to your imports!
-        # opt      | List of optional plugins to load only when 
+        # opt      | List of optional plugins to load only when
         #          | explicitly loaded from inside neovim
-        neovimBuilder = { customRC ? ""
-                        , viAlias  ? true
-                        , vimAlias ? true
-                        , start    ? builtins.attrValues pkgs.neovimPlugins
-                        , opt      ? []
-                        , debug    ? false }:
-                        let
-                          myNeovimUnwrapped = pkgs.neovim-unwrapped.overrideAttrs (prev: {
-                            propagatedBuildInputs = with pkgs; [ pkgs.stdenv.cc.cc.lib ];
-                          });
-                        in
-                        pkgs.wrapNeovim myNeovimUnwrapped {
-                          inherit viAlias;
-                          inherit vimAlias;
-                          configure = {
-                            customRC = customRC;
-                            packages.myVimPackage = with pkgs.neovimPlugins; {
-                              start = start;
-                              opt = opt;
-                            };
-                          };
-                        };
-      in
-      rec {
+        neovimBuilder = {
+          customRC ? "",
+          viAlias ? true,
+          vimAlias ? true,
+          start ? builtins.attrValues pkgs.neovimPlugins,
+          opt ? [],
+          debug ? false,
+        }: let
+          myNeovimUnwrapped = pkgs.neovim-unwrapped.overrideAttrs (prev: {
+            propagatedBuildInputs = with pkgs; [pkgs.stdenv.cc.cc.lib];
+          });
+        in
+          pkgs.wrapNeovim myNeovimUnwrapped {
+            inherit viAlias;
+            inherit vimAlias;
+            configure = {
+              customRC = customRC;
+              packages.myVimPackage = with pkgs.neovimPlugins; {
+                start = start;
+                opt = opt;
+              };
+            };
+          };
+      in rec {
         defaultApp = apps.nvim;
         defaultPackage = packages.neovimLuca;
 
         apps.nvim = {
-            type = "app";
-            program = "${defaultPackage}/bin/nvim";
-          };
+          type = "app";
+          program = "${defaultPackage}/bin/nvim";
+        };
 
         packages.neovimLuca = neovimBuilder {
           # the next line loads a trivial example of a init.vim:
