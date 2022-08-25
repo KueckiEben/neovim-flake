@@ -85,6 +85,38 @@
         "type": "github"
       }
     },
+    "plugin:ale": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1661253772,
+        "narHash": "sha256-6FnEcXm18ZSFYExEMumo9ci+wJUNmV19wJcJhRJjeO0=",
+        "owner": "dense-analysis",
+        "repo": "ale",
+        "rev": "6996d1c14dd109cc5112d1a60c86683e5308d14c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "dense-analysis",
+        "repo": "ale",
+        "type": "github"
+      }
+    },
+    "plugin:barbar.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1660118044,
+        "narHash": "sha256-wRj/YqpcBNGtPggAs7A121EVfZUQw2ynxP1rmi4thNk=",
+        "owner": "romgrk",
+        "repo": "barbar.nvim",
+        "rev": "8c6a2e6e472ff9b7dc0a53d9a3bd88f1fbc7da6d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "romgrk",
+        "repo": "barbar.nvim",
+        "type": "github"
+      }
+    },
     "plugin:gitsigns": {
       "flake": false,
       "locked": {
@@ -98,6 +130,38 @@
       "original": {
         "owner": "lewis6991",
         "repo": "gitsigns.nvim",
+        "type": "github"
+      }
+    },
+    "plugin:hop.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1659230065,
+        "narHash": "sha256-rHoHSv5K/4Zb8friFtQGo562Avan2wmExm+SEztDF7k=",
+        "owner": "phaazon",
+        "repo": "hop.nvim",
+        "rev": "2a1b686aad85a3c241f8cd8fd42eb09c7de5ed79",
+        "type": "github"
+      },
+      "original": {
+        "owner": "phaazon",
+        "repo": "hop.nvim",
+        "type": "github"
+      }
+    },
+    "plugin:indent-blankline.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1658908280,
+        "narHash": "sha256-La+gz7TiCTXRJxFXE0KLT3m3iUEKJrkyJH8XMpREgg4=",
+        "owner": "lukas-reineke",
+        "repo": "indent-blankline.nvim",
+        "rev": "c15bbe9f23d88b5c0b4ca45a446e01a0a3913707",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lukas-reineke",
+        "repo": "indent-blankline.nvim",
         "type": "github"
       }
     },
@@ -117,6 +181,22 @@
         "type": "github"
       }
     },
+    "plugin:nerdcoommenter": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1653077725,
+        "narHash": "sha256-0k24jvTVFfPzl9S4kmUHmRmnGmEMfphWzclym0MVPvQ=",
+        "owner": "preservim",
+        "repo": "nerdcommenter",
+        "rev": "6d30ebcd428eb5a244229a125420a1e044b42b52",
+        "type": "github"
+      },
+      "original": {
+        "owner": "preservim",
+        "repo": "nerdcommenter",
+        "type": "github"
+      }
+    },
     "plugin:onedark-vim": {
       "flake": false,
       "locked": {
@@ -130,6 +210,22 @@
       "original": {
         "owner": "joshdick",
         "repo": "onedark.vim",
+        "type": "github"
+      }
+    },
+    "plugin:plenary.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1659369288,
+        "narHash": "sha256-G84JTsj06vwidfEyaNIUvLLaKM9HB5zNAexCDWbGfu4=",
+        "owner": "nvim-lua",
+        "repo": "plenary.nvim",
+        "rev": "31807eef4ed574854b8a53ae40ea3292033a78ea",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-lua",
+        "repo": "plenary.nvim",
         "type": "github"
       }
     },
@@ -171,9 +267,15 @@
         "neovim-flake": "neovim-flake",
         "nixpkgs": "nixpkgs",
         "plugin:FTerm.nvim": "plugin:FTerm.nvim",
+        "plugin:ale": "plugin:ale",
+        "plugin:barbar.nvim": "plugin:barbar.nvim",
         "plugin:gitsigns": "plugin:gitsigns",
+        "plugin:hop.nvim": "plugin:hop.nvim",
+        "plugin:indent-blankline.nvim": "plugin:indent-blankline.nvim",
         "plugin:neo-tree.nvim": "plugin:neo-tree.nvim",
+        "plugin:nerdcoommenter": "plugin:nerdcoommenter",
         "plugin:onedark-vim": "plugin:onedark-vim",
+        "plugin:plenary.nvim": "plugin:plenary.nvim",
         "plugin:vim-nix": "plugin:vim-nix",
         "plugin:vimtex": "plugin:vimtex"
       }

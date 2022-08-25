@@ -22,6 +22,11 @@
       url = "github:lewis6991/gitsigns.nvim";
       flake = false;
     };
+    # Plenary
+    "plugin:plenary.nvim" = {
+      url = "github:nvim-lua/plenary.nvim";
+      flake = false;
+    };
     # neovim-nix
     "plugin:vim-nix" = {
       url = "github:LnL7/vim-nix";
@@ -40,6 +45,26 @@
     # Neo-Tree
     "plugin:neo-tree.nvim" = {
       url = "github:nvim-neo-tree/neo-tree.nvim";
+      flake = false;
+    };
+    # ALE
+    "plugin:ale" = {
+      url = "github:dense-analysis/ale";
+      flake = false;
+    };
+    # Hop
+    "plugin:hop.nvim" = {
+      url = "github:phaazon/hop.nvim";
+      flake = false;
+    };
+    # Nerdcommenter
+    "plugin:nerdcoommenter" = {
+      url = "github:preservim/nerdcommenter";
+      flake = false;
+    };
+    # Indent-Blankline
+    "plugin:indent-blankline.nvim" = {
+      url = "github:lukas-reineke/indent-blankline.nvim";
       flake = false;
     };
   };
