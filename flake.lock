@@ -69,6 +69,22 @@
         "type": "github"
       }
     },
+    "plugin:FTerm.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1658411599,
+        "narHash": "sha256-rR6KDwj58aYfyaSsoUy75536SdBhk394yspCUl/hzfE=",
+        "owner": "numToStr",
+        "repo": "FTerm.nvim",
+        "rev": "efd10656724a269e21ba68d65e2b058a4e606424",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numToStr",
+        "repo": "FTerm.nvim",
+        "type": "github"
+      }
+    },
     "plugin:gitsigns": {
       "flake": false,
       "locked": {
@@ -82,6 +98,22 @@
       "original": {
         "owner": "lewis6991",
         "repo": "gitsigns.nvim",
+        "type": "github"
+      }
+    },
+    "plugin:neo-tree.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1660951200,
+        "narHash": "sha256-yKZXHByatDefFeJpl067RGn9JClOKAnCwAnBFKeWYAs=",
+        "owner": "nvim-neo-tree",
+        "repo": "neo-tree.nvim",
+        "rev": "a7d6f05e57487326fd70b24195c3b7a86a88b156",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-neo-tree",
+        "repo": "neo-tree.nvim",
         "type": "github"
       }
     },
@@ -138,7 +170,9 @@
         "flake-utils": "flake-utils",
         "neovim-flake": "neovim-flake",
         "nixpkgs": "nixpkgs",
+        "plugin:FTerm.nvim": "plugin:FTerm.nvim",
         "plugin:gitsigns": "plugin:gitsigns",
+        "plugin:neo-tree.nvim": "plugin:neo-tree.nvim",
         "plugin:onedark-vim": "plugin:onedark-vim",
         "plugin:vim-nix": "plugin:vim-nix",
         "plugin:vimtex": "plugin:vimtex"
