@@ -37,16 +37,16 @@
       url = "github:numToStr/FTerm.nvim";
       flake = false;
     };
-    # plenary
-    "plugin:plenary.nvim" = {
-      url = "github:nvim-lua/plenary.nvim";
-      flake = false;
-    };
-    # telescope.nvim
-    "plugin:telescope.nvim" = {
-      url = "github:nvim-telescope/telescope.nvim";
-      flake = false;
-    };
+#    # plenary
+#    "plugin:plenary.nvim" = {
+#      url = "github:nvim-lua/plenary.nvim";
+#      flake = false;
+#    };
+#    # telescope.nvim
+#    "plugin:telescope.nvim" = {
+#      url = "github:nvim-telescope/telescope.nvim";
+#      flake = false;
+#    };
     # Telescope-File-Browser
     "plugin:telescope-file-browser" = {
       url = "github:nvim-telescope/telescope-file-browser.nvim";
