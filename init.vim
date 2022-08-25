@@ -2,9 +2,5 @@
 colorscheme onedark
 
 lua << EOF
-require("nvim-tree").setup()
-
-
-
 
 EOF

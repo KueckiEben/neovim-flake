@@ -37,16 +37,6 @@
       url = "github:numToStr/FTerm.nvim";
       flake = false;
     };
-    # NVIM Web DevIcons
-    "plugin:nvim-web-devicons" = {
-      url = "github:kyazdani42/nvim-web-devicons";
-      flake = false;
-    };
-    # NVIM Tree
-    "plugin:nvim-tree.lua" = {
-      url = "github:kyazdani42/nvim-tree.lua";
-      flake = false;
-    };
   };
 
   outputs = {
