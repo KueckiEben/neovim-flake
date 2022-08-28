@@ -101,19 +101,19 @@
         "type": "github"
       }
     },
-    "plugin:barbar.nvim": {
+    "plugin:doom-one-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1660118044,
-        "narHash": "sha256-wRj/YqpcBNGtPggAs7A121EVfZUQw2ynxP1rmi4thNk=",
-        "owner": "romgrk",
-        "repo": "barbar.nvim",
-        "rev": "8c6a2e6e472ff9b7dc0a53d9a3bd88f1fbc7da6d",
+        "lastModified": 1661296932,
+        "narHash": "sha256-nxSNcigW6u/hMtJ+NTJeaUrXov+IbaWs3MV97aRRpro=",
+        "owner": "NTBBloodbath",
+        "repo": "doom-one.nvim",
+        "rev": "347c5277948b8485301495b270a60eab24cee90c",
         "type": "github"
       },
       "original": {
-        "owner": "romgrk",
-        "repo": "barbar.nvim",
+        "owner": "NTBBloodbath",
+        "repo": "doom-one.nvim",
         "type": "github"
       }
     },
@@ -130,6 +130,22 @@
       "original": {
         "owner": "lewis6991",
         "repo": "gitsigns.nvim",
+        "type": "github"
+      }
+    },
+    "plugin:headlines-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1658198967,
+        "narHash": "sha256-Cy9Fh9RYldIfG021fY54PDCgeL7bs2sK28LGIHyVZYA=",
+        "owner": "lukas-reineke",
+        "repo": "headlines.nvim",
+        "rev": "1cd93a641c03419bb255f8b3fe734451517763b1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lukas-reineke",
+        "repo": "headlines.nvim",
         "type": "github"
       }
     },
@@ -181,6 +197,22 @@
         "type": "github"
       }
     },
+    "plugin:neorg": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1661618928,
+        "narHash": "sha256-Stbis1+jOaG2IXgSIqgSqflGABSQMgsvtG7r7s2x9og=",
+        "owner": "nvim-neorg",
+        "repo": "neorg",
+        "rev": "a4192fac695fa87b75357fccfe5566f0ca71a0f4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-neorg",
+        "repo": "neorg",
+        "type": "github"
+      }
+    },
     "plugin:nerdcoommenter": {
       "flake": false,
       "locked": {
@@ -200,11 +232,11 @@
     "plugin:onedark-vim": {
       "flake": false,
       "locked": {
-        "lastModified": 1634310286,
-        "narHash": "sha256-neKGGT+DLMyDMvWPWoiSQD31G1wfrMBGCWVuH14vmKc=",
+        "lastModified": 1658129205,
+        "narHash": "sha256-mEzN3y5knjwdSE47qnsw3/7iHqkPA/E5yy/yFrm7UKY=",
         "owner": "joshdick",
         "repo": "onedark.vim",
-        "rev": "e86ce939d85576fb7ce6c1c45fd49c8a570c24cc",
+        "rev": "1fe54f212f09a03c2b5e277f0fe5b7b9d0b0a4ed",
         "type": "github"
       },
       "original": {
@@ -268,11 +300,13 @@
         "nixpkgs": "nixpkgs",
         "plugin:FTerm.nvim": "plugin:FTerm.nvim",
         "plugin:ale": "plugin:ale",
-        "plugin:barbar.nvim": "plugin:barbar.nvim",
+        "plugin:doom-one-nvim": "plugin:doom-one-nvim",
         "plugin:gitsigns": "plugin:gitsigns",
+        "plugin:headlines-nvim": "plugin:headlines-nvim",
         "plugin:hop.nvim": "plugin:hop.nvim",
         "plugin:indent-blankline.nvim": "plugin:indent-blankline.nvim",
         "plugin:neo-tree.nvim": "plugin:neo-tree.nvim",
+        "plugin:neorg": "plugin:neorg",
         "plugin:nerdcoommenter": "plugin:nerdcoommenter",
         "plugin:onedark-vim": "plugin:onedark-vim",
         "plugin:plenary.nvim": "plugin:plenary.nvim",

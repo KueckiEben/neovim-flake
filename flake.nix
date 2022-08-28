@@ -11,10 +11,23 @@
       url = "github:neovim/neovim?dir=contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     # Theme
+    "plugin:doom-one-nvim" = {
+      url = "github:NTBBloodbath/doom-one.nvim";
+      flake = false;
+    };
     "plugin:onedark-vim" = {
       url = "github:joshdick/onedark.vim";
+      flake = false;
+    };
+    # Neorg
+    "plugin:neorg" = {
+      url = "github:nvim-neorg/neorg";
+      flake = false;
+    };
+    # Headlines
+    "plugin:headlines-nvim" = {
+      url = "github:lukas-reineke/headlines.nvim";
       flake = false;
     };
     # Git
